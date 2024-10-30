@@ -1,5 +1,5 @@
 import { CanActivate, Router,} from "@angular/router";
-import { UserService} from "../../services/user.service";
+import { UserService} from "../services/baseService/user.service";
 import { inject } from "@angular/core";
 
 // export class authGuard implements CanActivate {
@@ -16,8 +16,8 @@ import { inject } from "@angular/core";
 
 
 export function authGuard (){
-  const userService = inject(UserService)
-  const router = inject(Router)
+  const userService = inject(UserService) as UserService;
+  const router = inject(Router) as Router;
   if (userService.isAuthenticated()) {
     return true;
   }
