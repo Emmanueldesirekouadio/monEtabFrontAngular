@@ -1,0 +1,23 @@
+<div class="container">
+<form [formGroup]="formLogin">
+    <div class="login">
+        <h1>Mon Etab</h1>
+        <input type="text" [class.is-invalid]="isInvalidInput(formLogin.controls['identifiant'])" placeholder="Identifiant" formControlName="identifiant">
+        <span class="text-danger" *ngIf="isInvalidInput(formLogin.controls['username'])" >
+            <ng-container *ngIf="formLogin.controls['username'].hasError('required')">
+                Pseudo incorrect
+            </ng-container>
+        </span>
+        <input type="password" [class.is-invalid]="isInvalidInput(formLogin.controls['password'])" placeholder="Mot de passe" formControlName="password">
+        <span class="text-danger" *ngIf="isInvalidInput(formLogin.controls['password'])" >
+            <ng-container *ngIf="formLogin.controls['password'].hasError('required')">
+                Mot de passe incorrect
+            </ng-container>
+        </span>
+        <button onclick="login()">Connexion</button>
+    </div>
+
+    
+</form>
+<div>
+

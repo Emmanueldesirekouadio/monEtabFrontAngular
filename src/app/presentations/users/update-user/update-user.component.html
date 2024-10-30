@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-10" style="padding-left:25%;padding-top:10%;">
+        <div class="row">
+            <h1>Modifier l'utilisateur - 45678</h1>
+        </div>
+        <div class="row" style="margin-left:5%;">
+            <form [formGroup]="formUser">
+
+                
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" [class.is-invalid]="isInvalidInput(formUser.controls['username'])" id="username" formControlName="username" value="admin">
+                <span class="text-danger" *ngIf="isInvalidInput(formUser.controls['username'])" >
+                  <ng-container *ngIf="formUser.controls['username'].hasError('required')">
+                      Ce champs est requis
+                  </ng-container>
+              </span>
+            
+                <label for="old-password">Ancien mot de passe</label>
+                <input type="password" [class.is-invalid]="isInvalidInput(formUser.controls['old_password'])" id="password" formControlName="old_password">
+                <span class="text-danger" *ngIf="isInvalidInput(formUser.controls['old_password'])" >
+                  <ng-container *ngIf="formUser.controls['old_password'].hasError('required')">
+                      Ce champs est requis
+                  </ng-container>
+              </span>
+                
+                <label for="new-password">Nouveau mot de passe</label>
+                <input type="password" [class.is-invalid]="isInvalidInput(formUser.controls['password'])" id="password" formControlName="password">
+                <span class="text-danger" *ngIf="isInvalidInput(formUser.controls['password'])" >
+                  <ng-container *ngIf="formUser.controls['password'].hasError('required')">
+                      Ce champs est requis
+                  </ng-container>
+              </span>
+                
+                <label for="confirm-password">Confirmer nouveau mot de passe</label>
+                <input type="password" [class.is-invalid]="isInvalidInput(formUser.controls['password'])" id="password" formControlName="password">
+                <span class="text-danger" *ngIf="isInvalidInput(formUser.controls['password'])" >
+                  <ng-container *ngIf="formUser.controls['password'].hasError('required')">
+                      Ce champs est requis
+                  </ng-container>
+              </span>
+                
+                <div>
+                    <button type="button" class="button cancel">Annuler</button>
+                    <button type="submit" class="button save">Enregistrer</button>
+                </div>
+                
+
+            </form>
+        <div>
+  </div>
+    </div>
+  </div>

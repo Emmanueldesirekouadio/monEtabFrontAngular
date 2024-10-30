@@ -1,0 +1,79 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col">
+
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <h1>Professeurs (2)</h1>
+                </div>
+                <div class="row">
+                    <button class="new-student" style="width: auto;"><a routerLink="/add_teacher">Nouveau professeur</a></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Matière</th>
+                        <th>Vacant</th>
+                        <th>Âge</th>
+                        <th>Téléphone</th>
+                        <th>Ville</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KOUAKOU</td>
+                        <td>Gregoire</td>
+                        <td>Math</td>
+                        <td>Non</td>
+                        <td>40</td>
+                        <td>0123456789</td>
+                        <td>Touba</td>
+                        <td>
+                            <button class="button edit"> <a routerLink="/update_teacher">Modifier</a></button>
+                            <button class="button delete" onclick="showModal()">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ATTA</td>
+                        <td>Flora</td>
+                        <td>Physique</td>
+                        <td>Oui</td>
+                        <td>37</td>
+                        <td>0123456789</td>
+                        <td>Bouké</td>
+                        <td>
+                            <button class="button edit"><a routerLink="/update_teacher">Modifier</a></button>
+                            <button class="button delete" onclick="showModal()">Supprimer</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    
+    
+
+

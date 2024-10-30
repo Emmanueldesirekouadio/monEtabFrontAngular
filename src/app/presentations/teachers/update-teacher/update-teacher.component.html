@@ -1,0 +1,103 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-10">
+        <div class="row">
+            <h1>Modifier le professeur - 738</h1>
+        </div>
+        <div class="row">
+            <form [formGroup]="formTeacher">
+                <div class="row">
+                    <div class="col">
+                        <label for="lastname"></label>
+                        <input type="text" [class.is-invalid]="isInvalidInput(formTeacher.controls['lastname'])" id="lastname"  placeholder="Nom" formControlName="lastname">
+                        <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['lastname'])" >
+                            <ng-container *ngIf="formTeacher.controls['lastname'].hasError('required')">
+                                Ce champs est requis
+                            </ng-container>
+                        </span>
+                
+            
+                        <label for="firstname"></label>
+                        <input type="text" [class.is-invalid]="isInvalidInput(formTeacher.controls['firstname'])" id="firstname"  placeholder="Prénom" formControlName="firstname">
+                        <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['firstname'])" >
+                            <ng-container *ngIf="formTeacher.controls['firstname'].hasError('required')">
+                                Ce champs est requis
+                            </ng-container>
+                        </span>
+                
+            
+                        <div class="gender" style="display: flex;">
+                            <label><input type="radio" name="gender" value="Homme" required> Homme</label>
+                            <label><input type="radio" name="gender" value="Femme" required> Femme</label>
+                            <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['gender'])" >
+                                <ng-container *ngIf="formTeacher.controls['gender'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                        </div>
+            
+                        <label for="matricule"></label>
+                        <input type="text" [class.is-invalid]="isInvalidInput(formTeacher.controls['matricule'])" id="matricule"  placeholder="Matricule" formControlName="matricule">
+                        <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['matricule'])" >
+                            <ng-container *ngIf="formTeacher.controls['matricule'].hasError('required')">
+                                Ce champs est requis
+                            </ng-container>
+                        </span>
+                
+                    </div>
+                </div>
+    
+                <div class="row" style="width:100%;">
+                    <div class="col">
+                        <label for="class"></label>
+                        <select id="class" [class.is-invalid]="isInvalidInput(formTeacher.controls['classroom'])" formControlName="classroom">
+                            <option value="">--Choisir une classe--</option>
+                            <option value="1ere">1ère</option>
+                            <option value="2nde">2nde</option>
+                            <option value="3eme">3ème</option>
+                            <option value="4eme">4ème</option>
+                            <option value="5eme">5ème</option>
+                        </select>
+            
+                        <label for="dob">Date de naissance</label>
+                        <input type="date" [class.is-invalid]="isInvalidInput(formTeacher.controls['date'])" id="dob"  formControlName="date">
+                        <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['date'])" >
+                            <ng-container *ngIf="formTeacher.controls['date'].hasError('required')">
+                                Ce champs est requis
+                            </ng-container>
+                        </span>
+                
+            
+                        <label for="phone"></label>
+                        <input type="text" [class.is-invalid]="isInvalidInput(formTeacher.controls['phone'])" id="phone"  placeholder="Téléphone" formControlName="phone">
+                        <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['phone'])" >
+                            <ng-container *ngIf="formTeacher.controls['phone'].hasError('required')">
+                                Ce champs est requis
+                            </ng-container>
+                        </span>
+                
+            
+                        <label for="city"></label>
+                        <input type="text" [class.is-invalid]="isInvalidInput(formTeacher.controls['city'])" id="city"  placeholder="Ville" formControlName="city">
+                        <span class="text-danger" *ngIf="isInvalidInput(formTeacher.controls['city'])" >
+                            <ng-container *ngIf="formTeacher.controls['city'].hasError('required')">
+                                Ce champs est requis
+                            </ng-container>
+                        </span>
+                
+                    </div>
+                </div>
+    
+                <div>
+                    <button type="button" class="button cancel">Annuler</button>
+                    <button type="submit" class="button save">Enregistrer</button>
+                </div>
+            </form>
+        <div>
+  </div>
+    </div>
+  </div>

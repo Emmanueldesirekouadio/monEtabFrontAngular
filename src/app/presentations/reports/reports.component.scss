@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.sidebar {
+    width: 200px;
+    background: #D1CFCB;
+    color: #524f49;
+    padding: 0 25px;
+    height: 100vh;
+}
+.sidebar h2 {
+    margin-top: 0;
+    text-align: center;
+}
+.sidebar .logout{
+    margin-top: 100%;
+    padding-top: 50%;
+}
+.sidebar a {
+    color: #524f49;
+    text-decoration: none;
+    display: block;
+    margin: 18px 0;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
+h1 {
+    margin: 0 0 20px 0;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+select {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.pdf {
+    background-color: #FF0000; 
+    color: white;
+}
+.excel {
+    background-color: #28A745; 
+    color: white;
+}

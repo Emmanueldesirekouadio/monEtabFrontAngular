@@ -1,0 +1,103 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+            <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-10">
+            <div class="row">
+                <h1>Ajouter un élève</h1>
+            </div>
+            <div class="row">
+                <form [formGroup]="formStudent">
+                    <div class="row">
+                        <div class="col">
+                            <label for="lastname"></label>
+                            <input type="text" [class.is-invalid]="isInvalidInput(formStudent.controls['lastname'])" id="lastname"  placeholder="Nom" formControlName="lastname">
+                            <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['lastname'])" >
+                                <ng-container *ngIf="formStudent.controls['lastname'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                
+                            <label for="firstname"></label>
+                            <input type="text" [class.is-invalid]="isInvalidInput(formStudent.controls['firstname'])" id="firstname"  placeholder="Prénom" formControlName="firstname">
+                            <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['firstname'])" >
+                                <ng-container *ngIf="formStudent.controls['firstname'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                
+                            <div class="gender" style="display: flex;">
+                                <label><input type="radio" name="gender" value="Homme" required> Homme</label>
+                                <label><input type="radio" name="gender" value="Femme" required> Femme</label>
+                                <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['gender'])" >
+                                    <ng-container *ngIf="formStudent.controls['gender'].hasError('required')">
+                                        Ce champs est requis
+                                    </ng-container>
+                                </span>
+                        
+                            </div>
+                
+                            <label for="matricule"></label>
+                            <input type="text" [class.is-invalid]="isInvalidInput(formStudent.controls['matricule'])" id="matricule"  placeholder="Matricule" formControlName="matricule">
+                            <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['matricule'])" >
+                                <ng-container *ngIf="formStudent.controls['matricule'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                        </div>
+                    </div>
+        
+                    <div class="row" style="width:100%;">
+                        <div class="col">
+                            <label for="class"></label>
+                            <select id="class" [class.is-invalid]="isInvalidInput(formStudent.controls['classroom'])" formControlName="classroom">
+                                <option value="">--Choisir une classe--</option>
+                                <option value="1ere">1ère</option>
+                                <option value="2nde">2nde</option>
+                                <option value="3eme">3ème</option>
+                                <option value="4eme">4ème</option>
+                                <option value="5eme">5ème</option>
+                            </select>
+                
+                            <label for="dob">Date de naissance</label>
+                            <input type="date" [class.is-invalid]="isInvalidInput(formStudent.controls['date'])" id="dob"  formControlName="date">
+                            <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['date'])" >
+                                <ng-container *ngIf="formStudent.controls['date'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                
+                            <label for="phone"></label>
+                            <input type="text" [class.is-invalid]="isInvalidInput(formStudent.controls['phone'])" id="phone"  placeholder="Téléphone" formControlName="phone">
+                            <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['phone'])" >
+                                <ng-container *ngIf="formStudent.controls['phone'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                
+                            <label for="city"></label>
+                            <input type="text" [class.is-invalid]="isInvalidInput(formStudent.controls['city'])" id="city"  placeholder="Ville" formControlName="city">
+                            <span class="text-danger" *ngIf="isInvalidInput(formStudent.controls['city'])" >
+                                <ng-container *ngIf="formStudent.controls['city'].hasError('required')">
+                                    Ce champs est requis
+                                </ng-container>
+                            </span>
+                    
+                        </div>
+                    </div>
+        
+                    <div>
+                        <button type="button" class="button cancel">Annuler</button>
+                        <button type="submit" class="button save">Enregistrer</button>
+                    </div>
+                </form>
+            <div>
+      </div>
+    </div>
+  </div>
